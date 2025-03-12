@@ -1,0 +1,388 @@
+body {
+    font: 18px Arial, sans-serif;
+    min-width: 640px;
+    margin: 0;
+}
+
+:root {
+    --icon-size: 30px;
+    --theme-color: #5526A0;
+    --second-theme-color: #ECEAFF;
+    --button-red: #FF4D01;
+    --brief-introduction-text: #3E3E3E;
+    --Introduction-text-color: #686868;
+}
+
+
+
+.icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+#topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--theme-color);
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 70px;
+}
+
+#topBarLogo {
+    width: 200px;
+}
+
+#topBarRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: var(--second-theme-color)
+}
+
+#topBarMiddle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid var(--second-theme-color);
+    border-radius: 4px 0 0 4px;
+    box-sizing: border-box;
+    height: 30px;
+}
+
+#search {
+    border-radius: 0 4px 4px 0;
+}
+
+#search:hover {
+    cursor: pointer;
+}
+
+#user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font: 16px Arial, sans-serif;
+}
+
+#tabMenu {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--second-theme-color);
+}
+
+.tab {
+    background-color: transparent;
+    border: none;
+    padding: 14px 3% 10px;
+    width: fit-content;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.2;
+    box-sizing: border-box;
+    border-bottom: 4px solid transparent;
+    transition: 0.3s;
+}
+
+.tab:hover {
+    color: var(--theme-color);
+    border-bottom: 4px solid var(--theme-color);
+    cursor: pointer;
+}
+
+.tab.active {
+    color: var(--theme-color);
+    border-bottom: 4px solid var(--theme-color);
+    cursor: pointer;
+}
+
+#homePicture {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imgContainer {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: black;
+
+}
+
+#gotoAllCourses {
+    cursor: pointer;
+}
+
+.centerWelcome {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(211, 211, 211, 0.70);
+    font-size: 3em;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.tabContent {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.cards {
+    width: 300px;
+    height: 500px;
+    border: 1px solid #00000025;
+    box-shadow: 5px 5px 10px #00000025;
+    box-sizing: border-box;
+    margin: 8px;
+}
+
+.cardPics {
+    width: 100%;
+    height: 180px;
+}
+
+.courseList:hover {
+    cursor: pointer;
+}
+
+
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    margin: 15px;
+}
+
+#cardText {
+    min-height: 220px;
+}
+
+h3 {
+    font-size: 20px;
+    text-wrap: wrap;
+    padding: 0;
+    margin-block: 0;
+    padding-bottom: 20px;
+}
+
+.coursePara {
+    font-size: 16px;
+    text-wrap: wrap;
+    margin-block: 0;
+    padding-bottom: 20px;
+    color: var(--brief-introduction-text);
+}
+
+.coursePrice {
+    font-size: 22px;
+    font-weight: bold;
+    text-wrap: wrap;
+    margin-block: 0;
+}
+
+.enrolButton {
+    display: inline-block;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: hidden;
+    background-color: var(--button-red);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.enrolButton:hover {
+    background-color: var(--theme-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.cards:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width:425px) {
+    .cardContainer {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        width: 100%;
+        margin: 10px;
+    }
+
+    .cards {
+        width: 280px;
+        height: 480px;
+        border: 1px solid #00000025;
+        box-shadow: 5px 5px 10px #00000025;
+        box-sizing: border-box;
+        margin: 15px;
+    }
+
+    .cardPics {
+        width: 100%;
+        height: 160px;
+    }
+
+    #cardText {
+        min-height: 230px;
+    }
+}
+
+#enrolForm {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(211, 211, 211, 0.70);
+    justify-content: center;
+    align-items: center;
+}
+
+#formContent {
+    background-color: white;
+    padding: 30px;
+    width: 50%;
+    min-width: 543px;
+}
+
+#FormtoEnrol {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+form#FormtoEnrol input {
+    padding: 10px;
+    margin: 5px 0 10px;
+    border: 1px solid #686868;
+    border-radius: 4px;
+    height: 2rem;
+    Padding: 2px 8px 2px;
+    font-size: 1rem;
+}
+
+.centerIntheForm {
+    text-align: center;
+    margin-block-start: 0;
+}
+
+.centerIntheForm {
+    font-size: 1.5rem;
+    margin-block: 0;
+    padding-top: 10px;
+}
+
+#payment {
+    font-size: 1.2rem;
+    margin-block: 0;
+    padding-top: 10px;
+    text-align: center;
+}
+
+#expiry-cvvContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#buttonsintheForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#submitButton {
+    display: inline-block;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: hidden;
+    background-color: var(--button-red);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: solid 1px var(--button-red);
+    height: min-content;
+}
+
+#submitButton:hover {
+    background-color: var(--theme-color);
+    border-color: var(--theme-color);
+}
+
+#closeForm {
+    display: inline-block;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: hidden;
+    background-color: #dcdcdc;
+    color: var(--brief-introduction-text);
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: solid 1px #dcdcdc;
+    height: min-content;
+}
+
+#closeForm:hover {
+    background-color: #ccc;
+    border: solid 1px #3E3E3E;
+}

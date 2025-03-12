@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Fundamentals</title>
+    <link rel="stylesheet" href="../css/CourseView.css">
+</head>
+
+<body>
+    <div id="topBar">
+        <a href="/html/HomePage.html">
+            <img id="topBarLogo" src="../Pictures/logo.png" alt="MicroCourses">
+        </a>
+        <div id="topBarMiddle">
+            <input id="searchInput" type="text" placeholder="Search anything here" onkeypress="return searchCourses()">
+            <img id="search" class="icon" src="../Icons/search-svgrepo-com.svg" onclick="searchCourses()"
+                aria-label="search">
+        </div>
+
+        <div id="topBarRight">
+            <img id="bell" class="icon" src="../Icons/notification-bell-on-svgrepo-com.svg"
+                aria-label="incoming messages">
+            <div id="user">
+                <img id="userIcon" class="icon" src="../Icons/profile-svgrepo-com.svg">
+                <p aria-label="Login or sign up">Login/Sign Up</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="main">
+        <div id="links">
+            <a href="/html/HomePage.html" class="pathLinks">Home</a>
+            <p>></p>
+            <a href="/html/CyberSecurity.html" class="pathLinks">Cyber Security Fundamentals</a>
+        </div>
+        <div id="courseView">
+            <div id="hearder-container-pic">
+                <div id="courseHeader">
+                    <h1 id="header">Cyber Security Fundamentals</h1>
+                </div>
+                <div id="briefIntroduction">
+                    <div id="briefIntroContainer">
+                        <div id="briefIntroText">
+                            <p id="briefP">Understand key cybersecurity concepts and practices to protect information.
+                            </p>
+                            <ul id="briefP">
+                                <li id="Price">Price: $449</li>
+                                <li>Hours: 30 hours</li>
+                            </ul>
+                            <p id="briefP">Key Topics: Network Security, Threat Analysis, Incident Response, Risk
+                                Management</p>
+                        </div>
+                        <button class="enrolButton" aria-label="enrol in this course">Enrol</button>
+                    </div>
+                    <div id="coursePicContainer">
+                        <img id="coursePic" src="../Pictures/Cyber-Security.jpeg"
+                            alt="Cyber Security Fundamentals example picture." class="coursePics">
+                    </div>
+                </div>
+            </div>
+
+            <div id="fullIntro">
+                <div id="videoPart">
+                    <h2>Video Introduction</h2>
+                    <div id="iframe">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/inWWhr5tnEA?si=hAHHD5sfjukpejXJ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+                <div id="textPart">
+                    <h2> Introduction:</h2>
+                    <p id="fullIntroText">
+                        The Cyber Security Fundamentals course provides a thorough introduction to the essential
+                        practices and technologies used to safeguard digital assets. Students will gain an understanding
+                        of network security protocols, which are designed to protect data during transmission. The
+                        course covers key concepts such as threat analysis, which involves assessing vulnerabilities and
+                        identifying potential risks, and risk management practices that help organizations mitigate and
+                        respond to cyber incidents. Additionally, learners will study common security tools and ethical
+                        considerations in cybersecurity practices. This 30-hour course, available over 2 months of
+                        self-paced learning, is perfect for beginners and IT professionals aiming to enhance their
+                        understanding of how to defend against cyber threats. The course lays the groundwork for further
+                        advanced cybersecurity training and certifications.
+                    </p>
+                    <h2>Course Content:</h2>
+                    <ul id="fullIntroText">
+                        <li>Introduction to CyberSecurity</li>
+                        <li>Types of Cyber Threats</li>
+                        <li>Security Technologies</li>
+                        <li>Risk Assessment Strategies</li>
+                        <li>Case Studies</li>
+                    </ul>
+
+                    <h2>Schedule:</h2>
+                    <p id="fullIntroText">Self-paced, access for 2 months</p>
+                    <h2>Course Fee: $449</h2>
+                    <h2>Course Outcome:</h2>
+                    <ul id="fullIntroText">
+                        <li>Identify and mitigate potential security threats in various IT environments.</li>
+                        <li>Understand legal and ethical considerations in cybersecurity practices.
+                        </li>
+                        <li>Develop a foundational knowledge that prepares you for advanced cybersecurity
+                            certifications.</li>
+                    </ul>
+                    <h2>Prerequisite:</h2>
+                    <p id="fullIntroText">None</p>
+                    <button class="enrolButton" aria-label="enrol in this course">Enrol</button>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Enrol Form -->
+        <div id="enrolForm">
+            <div id="formContent">
+                <h2 class="centerIntheForm" id="formTitle">Please Register to Enrol:</h2>
+                <h2 class="centerIntheForm" id="courseName"></h2>
+                <h2 class="centerIntheForm" id="PriceinForm"></h2>
+                <form id="FormtoEnrol">
+                    <label for="YourName">Your Name:</label>
+                    <input type="text" id="YourName" name="YourName" required>
+                    <div id="YourNameError" class="error"></div>
+                    <label for="YourEmailAddress">Your Email Address:</label>
+                    <input type="email" id="YourEmailAddress" name="YourEmailAddress" required>
+                    <div id="YourEmailAddressError" class="error"></div>
+                    <label for="YourPhoneNumber">Your Phone Number:</label>
+                    <input type="number" id="YourPhoneNumber" name="YourPhoneNumber" required>
+                    <div id="YourPhoneNumberError" class="error"></div>
+
+                    <h2 id="payment">Your Payment Details:</h2>
+                    <label for="AccountName">Account Name:</label>
+                    <input type="text" id="AccountName" name="AccountName" required>
+                    <div id="AccountNameError" class="error"></div>
+                    <label for="CardNumber">Card Number:</label>
+                    <input type="number" id="CardNumber" name="CardNumber" required>
+                    <div id="CardNumberError" class="error"></div>
+                    <div id="expiry-cvvContainer">
+                        <div id="expiryContainer">
+                            <label for="Expiry">Expiry: </label>
+                            <input type="month" id="Expiry" name="Expiry" required>
+                            <div id="ExpiryError" class="error"></div>
+                        </div>
+                        <div id="cvvContainer">
+                            <label for="CVV">CVV:</label>
+                            <input type="number" id="CVV" name="CVV" required>
+                            <div id="CVVError" class="error"></div>
+                        </div>
+                    </div>
+                    <div id="buttonsintheForm">
+                        <button type="submit" id="submitButton" aria-label="ensure to pay and submit this form">Pay and
+                            Enrol</button>
+                        <button type="button" id="closeForm" aria-label="close this form">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/CourseView.js"></Script>
+</body>
+
+</html>

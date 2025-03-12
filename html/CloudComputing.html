@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing Essentials</title>
+    <link rel="stylesheet" href="../css/CourseView.css">
+</head>
+
+<body>
+    <div id="topBar">
+        <a href="/html/HomePage.html">
+            <img id="topBarLogo" src="../Pictures/logo.png" alt="MicroCourses">
+        </a>
+        <div id="topBarMiddle">
+            <input id="searchInput" type="text" placeholder="Search anything here" onkeypress="return searchCourses()">
+            <img id="search" class="icon" src="../Icons/search-svgrepo-com.svg" onclick="searchCourses()"
+                aria-label="search">
+        </div>
+
+        <div id="topBarRight">
+            <img id="bell" class="icon" src="../Icons/notification-bell-on-svgrepo-com.svg"
+                aria-label="incoming messages">
+            <div id="user">
+                <img id="userIcon" class="icon" src="../Icons/profile-svgrepo-com.svg">
+                <p aria-label="Login or sign up">Login/Sign Up</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="main">
+        <div id="links">
+            <a href="/html/HomePage.html" class="pathLinks">Home</a>
+            <p>></p>
+            <a href="/html/CloudComputing.html" class="pathLinks">Cloud Computing Essentials</a>
+        </div>
+        <div id="courseView">
+            <div id="hearder-container-pic">
+                <div id="courseHeader">
+                    <h1 id="header">Cloud Computing Essentials</h1>
+                </div>
+                <div id="briefIntroduction">
+                    <div id="briefIntroContainer">
+                        <div id="briefIntroText">
+                            <p id="briefP">Explore the fundamentals of cloud computing and its services.
+                            </p>
+                            <ul id="briefP">
+                                <li id="Price">Price: $499</li>
+                                <li>Hours: 35 hours</li>
+                            </ul>
+                            <p id="briefP">Key Topics: AWS, Azure, Google Cloud, PaaS, SaaS, IaaS</p>
+                        </div>
+                        <button class="enrolButton" aria-label="enrol in this course">Enrol</button>
+                    </div>
+                    <div id="coursePicContainer">
+                        <img id="coursePic" src="../Pictures/Cloud-Computing.jpeg"
+                            alt="Cloud Computing Essentials example picture." class="coursePics">
+                    </div>
+                </div>
+            </div>
+
+            <div id="fullIntro">
+                <div id="videoPart">
+                    <h2>Video Introduction</h2>
+                    <div id="iframe">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/_a6us8kaq0g?si=FrIvf5v906eEbIp3"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                </div>
+
+                <div id="textPart">
+                    <h2> Introduction:</h2>
+                    <p id="fullIntroText">
+                        The Cloud Computing Essentials course demystifies cloud technologies, focusing on the three
+                        major service providers: Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform
+                        (GCP). Learners will gain an understanding of Infrastructure as a Service (IaaS), Platform as a
+                        Service (PaaS), and Software as a Service (SaaS) models, each offering different levels of
+                        control and functionality. The course explores key concepts such as virtualization, which allows
+                        for efficient use of physical hardware, and cloud security practices that protect data and
+                        applications in virtual environments. With 35 hours of content accessible over 2 months,
+                        participants will complete hands-on labs to gain real-world experience deploying and managing
+                        cloud resources. This course is ideal for those with basic IT knowledge who wish to gain an
+                        essential understanding of cloud services and their applications in modern business.
+                    </p>
+                    <h2>Course Content:</h2>
+                    <ul id="fullIntroText">
+                        <li>Cloud Computing Models</li>
+                        <li>Cloud Service Providers</li>
+                        <li>Virtualization</li>
+                        <li>Security in the Cloud</li>
+                        <li>Hands-on Labs</li>
+                    </ul>
+
+                    <h2>Schedule:</h2>
+                    <p id="fullIntroText">Self-paced, access for 2 months</p>
+                    <h2>Course Fee: $499</h2>
+                    <h2>Course Outcome:</h2>
+                    <ul id="fullIntroText">
+                        <li>Implement cloud solutions tailored to business needs, enhancing operational efficiency.</li>
+                        <li>Understand the differences between various cloud service models and choose the best fit for
+                            projects.
+                        </li>
+                        <li>Gain hands-on experience with leading cloud platforms, preparing you for cloud-related
+                            roles.</li>
+                    </ul>
+                    <h2>Prerequisite:</h2>
+                    <p id="fullIntroText">Basic understanding of IT concepts</p>
+                    <button class="enrolButton" aria-label="enrol in this course">Enrol</button>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Enrol Form -->
+        <div id="enrolForm">
+            <div id="formContent">
+                <h2 class="centerIntheForm" id="formTitle">Please Register to Enrol:</h2>
+                <h2 class="centerIntheForm" id="courseName"></h2>
+                <h2 class="centerIntheForm" id="PriceinForm"></h2>
+                <form id="FormtoEnrol">
+                    <label for="YourName">Your Name:</label>
+                    <input type="text" id="YourName" name="YourName" required>
+                    <div id="YourNameError" class="error"></div>
+                    <label for="YourEmailAddress">Your Email Address:</label>
+                    <input type="email" id="YourEmailAddress" name="YourEmailAddress" required>
+                    <div id="YourEmailAddressError" class="error"></div>
+                    <label for="YourPhoneNumber">Your Phone Number:</label>
+                    <input type="number" id="YourPhoneNumber" name="YourPhoneNumber" required>
+                    <div id="YourPhoneNumberError" class="error"></div>
+
+                    <h2 id="payment">Your Payment Details:</h2>
+                    <label for="AccountName">Account Name:</label>
+                    <input type="text" id="AccountName" name="AccountName" required>
+                    <div id="AccountNameError" class="error"></div>
+                    <label for="CardNumber">Card Number:</label>
+                    <input type="number" id="CardNumber" name="CardNumber" required>
+                    <div id="CardNumberError" class="error"></div>
+                    <div id="expiry-cvvContainer">
+                        <div id="expiryContainer">
+                            <label for="Expiry">Expiry: </label>
+                            <input type="month" id="Expiry" name="Expiry" required>
+                            <div id="ExpiryError" class="error"></div>
+                        </div>
+                        <div id="cvvContainer">
+                            <label for="CVV">CVV:</label>
+                            <input type="number" id="CVV" name="CVV" required>
+                            <div id="CVVError" class="error"></div>
+                        </div>
+                    </div>
+                    <div id="buttonsintheForm">
+                        <button type="submit" id="submitButton" aria-label="ensure to pay and submit this form">Pay and
+                            Enrol</button>
+                        <button type="button" id="closeForm" aria-label="close this form">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="../js/CourseView.js"></Script>
+
+</body>
+
+</html>

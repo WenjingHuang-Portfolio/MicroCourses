@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Web Development</title>
+    <link rel="stylesheet" href="../css/CourseView.css">
+</head>
+
+<body>
+    <div id="topBar">
+        <a href="/html/HomePage.html">
+            <img id="topBarLogo" src="../Pictures/logo.png" alt="MicroCourses">
+        </a>
+        <div id="topBarMiddle">
+            <input id="searchInput" type="text" placeholder="Search anything here" onkeypress="return searchCourses()">
+            <img id="search" class="icon" src="../Icons/search-svgrepo-com.svg" onclick="searchCourses()"
+                aria-label="search">
+        </div>
+
+        <div id="topBarRight">
+            <img id="bell" class="icon" src="../Icons/notification-bell-on-svgrepo-com.svg"
+                aria-label="incoming messages">
+            <div id="user">
+                <img id="userIcon" class="icon" src="../Icons/profile-svgrepo-com.svg">
+                <p aria-label="Login or sign up">Login/Sign Up</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="main">
+        <div id="links">
+            <a href="/html/HomePage.html" class="pathLinks">Home</a>
+            <p>></p>
+            <a href="/html/Full-StackWebDevelopment.html" class="pathLinks">Full-Stack Web Development</a>
+        </div>
+        <div id="courseView">
+            <div id="hearder-container-pic">
+                <div id="courseHeader">
+                    <h1 id="header">Full-Stack Web Development</h1>
+                </div>
+                <div id="briefIntroduction">
+                    <div id="briefIntroContainer">
+                        <div id="briefIntroText">
+                            <p id="briefP">Learn to build complete web applications from front-end to back-end.</p>
+                            <ul id="briefP">
+                                <li id="Price">Price: $499</li>
+                                <li>Hours: 40 hours</li>
+                            </ul>
+                            <p id="briefP">Key Topics: HTML, CSS, JavaScript, Node.js, Express, MongoDB</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <button class="enrolButton" aria-label="enrol in this course">Enrol</button>
+                        </div>
+                    </div>
+                    <div id="coursePicContainer">
+                        <img id="coursePic" src="../Pictures/Web-Development.jpeg"
+                            alt="Full-Stack Web Development example picture." class="coursePics">
+                    </div>
+                </div>
+            </div>
+
+            <div id="fullIntro">
+                <div id="videoPart">
+                    <h2>Video Introduction</h2>
+                    <div id="iframe">
+                        <iframe width="100%" height="100%"
+                            src="https://www.youtube.com/embed/v0fh9YvF84s?si=cYy3hTVNVUKOWale"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                </div>
+
+                <div id="textPart">
+                    <h2> Introduction:</h2>
+                    <p id="fullIntroText">
+                        The Full Stack Web Development course is designed to equip students with the ability to create
+                        fully functional web applications from scratch. This course introduces front-end technologies
+                        like HTML, CSS, and JavaScript, essential for building user-friendly web interfaces. Students
+                        will also explore back-end development with Node.js, a powerful JavaScript runtime that enables
+                        server-side scripting, and Express.js, a minimalist framework that simplifies building APIs and
+                        server-side logic. For database management, the course covers MongoDB, a NoSQL database that
+                        provides flexibility for handling unstructured data. Through this 40-hour, self-paced course,
+                        students will complete hands-on projects that reinforce the concepts learned, culminating in the
+                        ability to build and deploy complete web applications. The course is perfect for those with some
+                        basic programming background who wish to become proficient in both client-side and server-side
+                        development.
+                    </p>
+                    <h2>Course Content:</h2>
+                    <ul id="fullIntroText">
+                        <li>Introduction to Web Development</li>
+                        <li>Front-End Development</li>
+                        <li>Back-End Development</li>
+                        <li>Database Management</li>
+                        <li>Project Work</li>
+                    </ul>
+
+                    <h2>Schedule:</h2>
+                    <p id="fullIntroText">Self-paced, access for 3 months</p>
+                    <h2>Course Fee: $499</h2>
+                    <h2>Course Outcome:</h2>
+                    <ul id="fullIntroText">
+                        <li>Build and deploy fully functional web applications using popular technologies.</li>
+                        <li>Gain a comprehensive understanding of both front-end and back-end development processes.
+                        </li>
+                        <li>Develop problem-solving skills through hands-on project work and real-world scenarios.</li>
+                    </ul>
+                    <h2>Prerequisite:</h2>
+                    <p id="fullIntroText">Basic programming knowledge</p>
+                    <div id="buttonContainer">
+                        <button class="enrolButton" aria-label="enrol in this course">Enrol</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Enrol Form -->
+        <div id="enrolForm">
+            <div id="formContent">
+                <h2 class="centerIntheForm" id="formTitle">Please Register to Enrol:</h2>
+                <h2 class="centerIntheForm" id="courseName"></h2>
+                <h2 class="centerIntheForm" id="PriceinForm"></h2>
+                <form id="FormtoEnrol">
+                    <label for="YourName">Your Name:</label>
+                    <input type="text" id="YourName" name="YourName" required>
+                    <div id="YourNameError" class="error"></div>
+                    <label for="YourEmailAddress">Your Email Address:</label>
+                    <input type="email" id="YourEmailAddress" name="YourEmailAddress" required>
+                    <div id="YourEmailAddressError" class="error"></div>
+                    <label for="YourPhoneNumber">Your Phone Number:</label>
+                    <input type="number" id="YourPhoneNumber" name="YourPhoneNumber" required>
+                    <div id="YourPhoneNumberError" class="error"></div>
+
+                    <h2 id="payment">Your Payment Details:</h2>
+                    <label for="AccountName">Account Name:</label>
+                    <input type="text" id="AccountName" name="AccountName" required>
+                    <div id="AccountNameError" class="error"></div>
+                    <label for="CardNumber">Card Number:</label>
+                    <input type="number" id="CardNumber" name="CardNumber" required>
+                    <div id="CardNumberError" class="error"></div>
+                    <div id="expiry-cvvContainer">
+                        <div id="expiryContainer">
+                            <label for="Expiry">Expiry: </label>
+                            <input type="month" id="Expiry" name="Expiry" required>
+                            <div id="ExpiryError" class="error"></div>
+                        </div>
+                        <div id="cvvContainer">
+                            <label for="CVV">CVV:</label>
+                            <input type="number" id="CVV" name="CVV" required>
+                            <div id="CVVError" class="error"></div>
+                        </div>
+                    </div>
+                    <div id="buttonsintheForm">
+                        <button type="submit" id="submitButton" aria-label="ensure to pay and submit this form">Pay and
+                            Enrol</button>
+                        <button type="button" id="closeForm" aria-label="close this form">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/CourseView.js"></Script>
+
+
+
+
+</body>
+
+</html>

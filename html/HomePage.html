@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroCourses Home Page</title>
+    <link rel="stylesheet" href="../css/HomePage.css">
+
+</head>
+
+
+
+<body>
+
+    <div id="topBar">
+        <a href="/html/HomePage.html">
+            <img id="topBarLogo" src="../Pictures/logo.png" alt="MicroCourses">
+        </a>
+
+        <div id="topBarMiddle">
+            <input id="searchInput" type="text" placeholder="Search anything here" onkeypress="return searchCourses()">
+            <img id="search" class="icon" src="../Icons/search-svgrepo-com.svg" onclick="searchCourses()"
+                aria-label="search">
+        </div>
+
+        <div id="topBarRight">
+            <img id="bell" class="icon" src="../Icons/notification-bell-on-svgrepo-com.svg"
+                aria-label="incoming messages">
+            <div id="user">
+                <img id="userIcon" class="icon" src="../Icons/profile-svgrepo-com.svg">
+                <p aria-label="Login or sign up">Login/Sign Up</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <!-- Tab links -->
+        <div id="tabMenu">
+            <button class="tab" id="ExploreAllCourses"
+                onclick="openExploreAllCourses(); openCourse(event, 'Explore all courses')">Explore
+                all courses</button>
+            <button class="tab" onclick="openCourse(event, 'Information Technology')">Information
+                Technology</button>
+            <button class="tab" onclick="openCourse(event, 'Accounting')">Accounting</button>
+            <button class="tab" onclick="openCourse(event, 'Business')">Business</button>
+            <button class="tab" onclick="openCourse(event, 'Design')">Design</button>
+        </div>
+
+        <div id="hideWhenTabActive">
+            <div id="welcome" class="imgContainer">
+                <a id="gotoAllCourses"
+                    onclick="document.querySelector('#allCoursesContainer').scrollIntoView({ behavior: 'smooth' })">
+                    <img id="homePicture" src="../Pictures/Home-Picture.jpeg" alt="Welcome to MicroCourses!">
+                    <div class="centerWelcome">Welcome to MicroCourses! <br>
+                        Enrol in and Start to Learn!</div>
+                </a>
+            </div>
+
+            <div class="cardContainer" id="allCoursesContainer">
+                <a href="/html/Full-StackWebDevelopment.html">
+                    <div id="FullStackWebDevelopment" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Web-Development.jpeg"
+                                alt="Full-Stack Web Development example picture." class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Full-Stack Web Development</h3>
+                                <p class="coursePara">Learn to build complete web applications from front-end to
+                                    back-end.
+                                </p>
+                                <p class="coursePara">Hours: 40 hours</p>
+                                <p class="coursePrice">Price: $499</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/html/DataScienceandMachineLearning.html">
+                    <div id="DataScienceandMachineLearning" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Data-Science.jpeg"
+                                alt="Data Science and Machine Learning example picture." class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Data Science and Machine Learning</h3>
+                                <p class="coursePara">Dive into data analysis, machine learning algorithms, and
+                                    visualization
+                                    techniques.</p>
+                                <p class="coursePara">Hours: 50 hours</p>
+                                <p class="coursePrice">Price: $599</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/html/CyberSecurity.html">
+                    <div id="CyberSecurityFundamentals" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Cyber-Security.jpeg"
+                                alt="Cyber Security Fundamentals example picture." class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Cyber Security Fundamentals</h3>
+                                <p class="coursePara">Understand key cybersecurity concepts and practices to protect
+                                    information.
+                                </p>
+                                <p class="coursePara">Hours: 30 hours</p>
+                                <p class="coursePrice">Price: $449</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/html/CloudComputing.html">
+                    <div id="CloudComputingEssentials" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Cloud-Computing.jpeg"
+                                alt="Cloud Computing Essentials example picture." class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Cloud Computing Essentials</h3>
+                                <p class="coursePara">Explore the fundamentals of cloud computing and its services.
+                                </p>
+                                <p class="coursePara">Hours: 35 hours</p>
+                                <p class="coursePrice">Price: $499</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a>
+                    <div id="IntroductiontoFinancialAccounting" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Financial-Accounting.jpeg"
+                                alt="Introduction to Financial Accounting example picture." class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Introduction to Financial Accounting</h3>
+                                <p class="coursePara">Master the basics of financial accounting and reporting.
+                                </p>
+                                <p class="coursePara">Hours: 40 hours</p>
+                                <p class="coursePrice">Price: $399</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a>
+                    <div id="ManagerialAccounting" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Managerial-Accounting.jpeg"
+                                alt="Managerial Accounting example picture." class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Managerial Accounting</h3>
+                                <p class="coursePara">Learn how to use accounting information for managerial
+                                    decision-making.
+                                </p>
+                                <p class="coursePara">Hours: 35 hours</p>
+                                <p class="coursePrice">Price: $459</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a>
+                    <div id="TaxationPrinciplesandPractices" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Taxation.jpeg"
+                                alt="Taxation Principles and Practices example picture." class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Taxation Principles and Practices</h3>
+                                <p class="coursePara">Gain insights into taxation laws and tax preparation.
+                                </p>
+                                <p class="coursePara">Hours: 45 hours</p>
+                                <p class="coursePrice">Price: $499</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a>
+                    <div id="AuditingPrinciples" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Auditing.jpeg" alt="Auditing Principles example picture."
+                                class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Auditing Principles</h3>
+                                <p class="coursePara">Learn the essentials of auditing standards and practices.
+                                </p>
+                                <p class="coursePara">Hours: 30 hours</p>
+                                <p class="coursePrice">Price: $449</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a>
+                    <div id="FundamentalsofBusinessManagement" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Business-Management.jpeg"
+                                alt="Fundamentals of Business Management example picture." class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Fundamentals of Business Management</h3>
+                                <p class="coursePara">Explore key concepts in business management and leadership.
+                                </p>
+                                <p class="coursePara">Hours: 30 hours</p>
+                                <p class="coursePrice">Price: $379</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a>
+                    <div id="MarketingStrategiesfortheDigitalAge" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/ Marketing-Strategies.jpeg"
+                                alt="Marketing Strategies for the Digital Age example picture." class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Marketing Strategies for the Digital Age</h3>
+                                <p class="coursePara">Learn how to develop effective digital marketing strategies.
+                                </p>
+                                <p class="coursePara">Hours: 35 hours</p>
+                                <p class="coursePrice">Price: $429</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a>
+                    <div id="FinancialManagementEssentials" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Financial-Management.jpeg"
+                                alt="Financial Management Essentials example picture." class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Financial Management Essentials</h3>
+                                <p class="coursePara">Understand the financial aspects of managing a business.
+                                </p>
+                                <p class="coursePara">Hours: 40 hours</p>
+                                <p class="coursePrice">Price: $479</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a>
+                    <div id="Entrepreneurship:TurningIdeasintoAction" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Entrepreneurship.jpeg"
+                                alt="Entrepreneurship: Turning Ideas into Action example picture." class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Entrepreneurship: Turning Ideas into Action</h3>
+                                <p class="coursePara">Learn the essentials of starting and managing a new venture.
+                                </p>
+                                <p class="coursePara">Hours: 45 hours</p>
+                                <p class="coursePrice">Price: $499</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a>
+                    <div id="GraphicDesignBasics" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/Graphic-Design.jpeg" alt="Graphic Design Basics example picture."
+                                class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">Graphic Design Basics</h3>
+                                <p class="coursePara">Discover the fundamentals of graphic design and visual
+                                    communication.
+                                </p>
+                                <p class="coursePara">Hours: 30 hours</p>
+                                <p class="coursePrice">Price: $399</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a>
+                    <div id="UI/UXDesignFundamentals" class="cards">
+                        <div class="cardPics">
+                            <img src="../Pictures/UI:UX-Design.jpeg" alt="UI/UX Design Fundamentals example picture."
+                                class="cardPics">
+                        </div>
+                        <div class="cardInfo">
+                            <div id="cardText">
+                                <h3 class="cardTitle">UI/UX Design Fundamentals</h3>
+                                <p class="coursePara">Learn the principles of user interface and user experience design
+                                    to create intuitive applications.
+                                </p>
+                                <p class="coursePara">Hours: 40 hours</p>
+                                <p class="coursePrice">Price: $499</p>
+                            </div>
+                            <div id="buttonContainer">
+                                <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- All courses cards -->
+        <div class="tabContent" id="Explore all courses">
+            <a href="/html/Full-StackWebDevelopment.html">
+                <div id="FullStackWebDevelopment" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Web-Development.jpeg" alt="Full-Stack Web Development example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Full-Stack Web Development</h3>
+                            <p class="coursePara">Learn to build complete web applications from front-end to
+                                back-end.
+                            </p>
+                            <p class="coursePara">Hours: 40 hours</p>
+                            <p class="coursePrice">Price: $499</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/html/DataScienceandMachineLearning.html">
+                <div id="DataScienceandMachineLearning" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Data-Science.jpeg"
+                            alt="Data Science and Machine Learning example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Data Science and Machine Learning</h3>
+                            <p class="coursePara">Dive into data analysis, machine learning algorithms, and
+                                visualization
+                                techniques.</p>
+                            <p class="coursePara">Hours: 50 hours</p>
+                            <p class="coursePrice">Price: $599</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/html/CyberSecurity.html">
+                <div id="CyberSecurityFundamentals" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Cyber-Security.jpeg" alt="Cyber Security Fundamentals example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Cyber Security Fundamentals</h3>
+                            <p class="coursePara">Understand key cybersecurity concepts and practices to protect
+                                information.
+                            </p>
+                            <p class="coursePara">Hours: 30 hours</p>
+                            <p class="coursePrice">Price: $449</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/html/CloudComputing.html">
+                <div id="CloudComputingEssentials" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Cloud-Computing.jpeg" alt="Cloud Computing Essentials example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Cloud Computing Essentials</h3>
+                            <p class="coursePara">Explore the fundamentals of cloud computing and its services.
+                            </p>
+                            <p class="coursePara">Hours: 35 hours</p>
+                            <p class="coursePrice">Price: $499</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="IntroductiontoFinancialAccounting" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Financial-Accounting.jpeg"
+                            alt="Introduction to Financial Accounting example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Introduction to Financial Accounting</h3>
+                            <p class="coursePara">Master the basics of financial accounting and reporting.
+                            </p>
+                            <p class="coursePara">Hours: 40 hours</p>
+                            <p class="coursePrice">Price: $399</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="ManagerialAccounting" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Managerial-Accounting.jpeg" alt="Managerial Accounting example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Managerial Accounting</h3>
+                            <p class="coursePara">Learn how to use accounting information for managerial
+                                decision-making.
+                            </p>
+                            <p class="coursePara">Hours: 35 hours</p>
+                            <p class="coursePrice">Price: $459</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="TaxationPrinciplesandPractices" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Taxation.jpeg" alt="Taxation Principles and Practices example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Taxation Principles and Practices</h3>
+                            <p class="coursePara">Gain insights into taxation laws and tax preparation.
+                            </p>
+                            <p class="coursePara">Hours: 45 hours</p>
+                            <p class="coursePrice">Price: $499</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="AuditingPrinciples" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Auditing.jpeg" alt="Auditing Principles example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Auditing Principles</h3>
+                            <p class="coursePara">Learn the essentials of auditing standards and practices.
+                            </p>
+                            <p class="coursePara">Hours: 30 hours</p>
+                            <p class="coursePrice">Price: $449</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="FundamentalsofBusinessManagement" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Business-Management.jpeg"
+                            alt="Fundamentals of Business Management example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Fundamentals of Business Management</h3>
+                            <p class="coursePara">Explore key concepts in business management and leadership.
+                            </p>
+                            <p class="coursePara">Hours: 30 hours</p>
+                            <p class="coursePrice">Price: $379</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="MarketingStrategiesfortheDigitalAge" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/ Marketing-Strategies.jpeg"
+                            alt="Marketing Strategies for the Digital Age example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Marketing Strategies for the Digital Age</h3>
+                            <p class="coursePara">Learn how to develop effective digital marketing strategies.
+                            </p>
+                            <p class="coursePara">Hours: 35 hours</p>
+                            <p class="coursePrice">Price: $429</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="FinancialManagementEssentials" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Financial-Management.jpeg"
+                            alt="Financial Management Essentials example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Financial Management Essentials</h3>
+                            <p class="coursePara">Understand the financial aspects of managing a business.
+                            </p>
+                            <p class="coursePara">Hours: 40 hours</p>
+                            <p class="coursePrice">Price: $479</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="Entrepreneurship:TurningIdeasintoAction" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Entrepreneurship.jpeg"
+                            alt="Entrepreneurship: Turning Ideas into Action example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Entrepreneurship: Turning Ideas into Action</h3>
+                            <p class="coursePara">Learn the essentials of starting and managing a new venture.
+                            </p>
+                            <p class="coursePara">Hours: 45 hours</p>
+                            <p class="coursePrice">Price: $499</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="GraphicDesignBasics" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Graphic-Design.jpeg" alt="Graphic Design Basics example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Graphic Design Basics</h3>
+                            <p class="coursePara">Discover the fundamentals of graphic design and visual communication.
+                            </p>
+                            <p class="coursePara">Hours: 30 hours</p>
+                            <p class="coursePrice">Price: $399</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="UI/UXDesignFundamentals" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/UI:UX-Design.jpeg" alt="UI/UX Design Fundamentals example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">UI/UX Design Fundamentals</h3>
+                            <p class="coursePara">Learn the principles of user interface and user experience design to
+                                create intuitive applications.
+                            </p>
+                            <p class="coursePara">Hours: 40 hours</p>
+                            <p class="coursePrice">Price: $499</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Information Technology -->
+        <div class="tabContent" id="Information Technology">
+            <a href="/html/Full-StackWebDevelopment.html">
+                <div id="FullStackWebDevelopment" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Web-Development.jpeg" alt="Full-Stack Web Development example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Full-Stack Web Development</h3>
+                            <p class="coursePara">Learn to build complete web applications from front-end to back-end.
+                            </p>
+                            <p class="coursePara">Hours: 40 hours</p>
+                            <p class="coursePrice">Price: $499</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <button class="enrolButton" aria-label="enrol in this course">Enrol</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/html/DataScienceandMachineLearning.html">
+                <div id="DataScienceandMachineLearning" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Data-Science.jpeg"
+                            alt="Data Science and Machine Learning example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Data Science and Machine Learning</h3>
+                            <p class="coursePara">Dive into data analysis, machine learning algorithms, and
+                                visualization
+                                techniques.</p>
+                            <p class="coursePara">Hours: 50 hours</p>
+                            <p class="coursePrice">Price: $599</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <button class="enrolButton" aria-label="enrol in this course">Enrol</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/Cyber Security Fundamentals">
+                <div id="CyberSecurityFundamentals" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Cyber-Security.jpeg" alt="Cyber Security Fundamentals example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Cyber Security Fundamentals</h3>
+                            <p class="coursePara">Understand key cybersecurity concepts and practices to protect
+                                information.
+                            </p>
+                            <p class="coursePara">Hours: 30 hours</p>
+                            <p class="coursePrice">Price: $449</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <button class="enrolButton" aria-label="enrol in this course">Enrol</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="/html/CloudComputing.html">
+                <div id="CloudComputingEssentials" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Cloud-Computing.jpeg" alt="Cloud Computing Essentials example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Cloud Computing Essentials</h3>
+                            <p class="coursePara">Explore the fundamentals of cloud computing and its services.
+                            </p>
+                            <p class="coursePara">Hours: 35 hours</p>
+                            <p class="coursePrice">Price: $499</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <button class="enrolButton" aria-label="enrol in this course">Enrol</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Accounting -->
+        <div class="tabContent" id="Accounting">
+            <a>
+                <div id="IntroductiontoFinancialAccounting" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Financial-Accounting.jpeg"
+                            alt="Introduction to Financial Accounting example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Introduction to Financial Accounting</h3>
+                            <p class="coursePara">Master the basics of financial accounting and reporting.
+                            </p>
+                            <p class="coursePara">Hours: 40 hours</p>
+                            <p class="coursePrice">Price: $399</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="ManagerialAccounting" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Managerial-Accounting.jpeg" alt="Managerial Accounting example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Managerial Accounting</h3>
+                            <p class="coursePara">Learn how to use accounting information for managerial
+                                decision-making.
+                            </p>
+                            <p class="coursePara">Hours: 35 hours</p>
+                            <p class="coursePrice">Price: $459</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="TaxationPrinciplesandPractices" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Taxation.jpeg" alt="Taxation Principles and Practices example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Taxation Principles and Practices</h3>
+                            <p class="coursePara">Gain insights into taxation laws and tax preparation.
+                            </p>
+                            <p class="coursePara">Hours: 45 hours</p>
+                            <p class="coursePrice">Price: $499</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="AuditingPrinciples" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Auditing.jpeg" alt="Auditing Principles example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Auditing Principles</h3>
+                            <p class="coursePara">Learn the essentials of auditing standards and practices.
+                            </p>
+                            <p class="coursePara">Hours: 30 hours</p>
+                            <p class="coursePrice">Price: $449</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Business -->
+        <div class="tabContent" id="Business">
+            <a>
+                <div id="FundamentalsofBusinessManagement" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Business-Management.jpeg"
+                            alt="Fundamentals of Business Management example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Fundamentals of Business Management</h3>
+                            <p class="coursePara">Explore key concepts in business management and leadership.
+                            </p>
+                            <p class="coursePara">Hours: 30 hours</p>
+                            <p class="coursePrice">Price: $379</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="MarketingStrategiesfortheDigitalAge" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/ Marketing-Strategies.jpeg"
+                            alt="Marketing Strategies for the Digital Age example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Marketing Strategies for the Digital Age</h3>
+                            <p class="coursePara">Learn how to develop effective digital marketing strategies.
+                            </p>
+                            <p class="coursePara">Hours: 35 hours</p>
+                            <p class="coursePrice">Price: $429</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="FinancialManagementEssentials" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Financial-Management.jpeg"
+                            alt="Financial Management Essentials example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Financial Management Essentials</h3>
+                            <p class="coursePara">Understand the financial aspects of managing a business.
+                            </p>
+                            <p class="coursePara">Hours: 40 hours</p>
+                            <p class="coursePrice">Price: $479</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="Entrepreneurship:TurningIdeasintoAction" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Entrepreneurship.jpeg"
+                            alt="Entrepreneurship: Turning Ideas into Action example picture." class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Entrepreneurship: Turning Ideas into Action</h3>
+                            <p class="coursePara">Learn the essentials of starting and managing a new venture.
+                            </p>
+                            <p class="coursePara">Hours: 45 hours</p>
+                            <p class="coursePrice">Price: $499</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Design -->
+        <div class="tabContent" id="Design">
+            <a>
+                <div id="GraphicDesignBasics" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/Graphic-Design.jpeg" alt="Graphic Design Basics example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">Graphic Design Basics</h3>
+                            <p class="coursePara">Discover the fundamentals of graphic design and visual communication.
+                            </p>
+                            <p class="coursePara">Hours: 30 hours</p>
+                            <p class="coursePrice">Price: $399</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a>
+                <div id="UI/UXDesignFundamentals" class="cards">
+                    <div class="cardPics">
+                        <img src="../Pictures/UI:UX-Design.jpeg" alt="UI/UX Design Fundamentals example picture."
+                            class="cardPics">
+                    </div>
+                    <div class="cardInfo">
+                        <div id="cardText">
+                            <h3 class="cardTitle">UI/UX Design Fundamentals</h3>
+                            <p class="coursePara">Learn the principles of user interface and user experience design to
+                                create intuitive applications.
+                            </p>
+                            <p class="coursePara">Hours: 40 hours</p>
+                            <p class="coursePrice">Price: $499</p>
+                        </div>
+                        <div id="buttonContainer">
+                            <a class="enrolButton" aria-label="enrol in this course">Enrol</a>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Enrol Form -->
+        <div id="enrolForm">
+            <div id="formContent">
+                <h2 class="centerIntheForm" id="formTitle">Please Register to Enrol:</h2>
+                <h2 class="centerIntheForm" id="courseName"></h2>
+                <h2 class="centerIntheForm" id="PriceinForm"></h2>
+                <form id="FormtoEnrol">
+                    <label for="YourName">Your Name:</label>
+                    <input type="text" id="YourName" name="YourName" required>
+                    <div id="YourNameError" class="error"></div>
+                    <label for="YourEmailAddress">Your Email Address:</label>
+                    <input type="email" id="YourEmailAddress" name="YourEmailAddress" required>
+                    <div id="YourEmailAddressError" class="error"></div>
+                    <label for="YourPhoneNumber">Your Phone Number:</label>
+                    <input type="number" id="YourPhoneNumber" name="YourPhoneNumber" required>
+                    <div id="YourPhoneNumberError" class="error"></div>
+
+                    <h2 id="payment">Your Payment Details:</h2>
+                    <label for="AccountName">Account Name:</label>
+                    <input type="text" id="AccountName" name="AccountName" required>
+                    <div id="AccountNameError" class="error"></div>
+                    <label for="CardNumber">Card Number:</label>
+                    <input type="number" id="CardNumber" name="CardNumber" required>
+                    <div id="CardNumberError" class="error"></div>
+                    <div id="expiry-cvvContainer">
+                        <div id="expiryContainer">
+                            <label for="Expiry">Expiry: </label>
+                            <input type="month" id="Expiry" name="Expiry" required>
+                            <div id="ExpiryError" class="error"></div>
+                        </div>
+                        <div id="cvvContainer">
+                            <label for="CVV">CVV:</label>
+                            <input type="number" id="CVV" name="CVV" required>
+                            <div id="CVVError" class="error"></div>
+                        </div>
+                    </div>
+                    <div id="buttonsintheForm">
+                        <button type="submit" id="submitButton" aria-label="ensure to pay and submit this form">Pay and
+                            Enrol</button>
+                        <button type="button" id="closeForm" aria-label="close this form">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- search result -->
+    <div id="searchResult">
+
+    </div>
+
+    <script src="../js/HomePage.js"></script>
+
+
+</body>
+
+</html>
